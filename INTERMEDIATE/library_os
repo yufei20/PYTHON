@@ -1,0 +1,21 @@
+import os  # Operating System
+
+# print(os.getcwd())
+# os.makedirs("Maaz/Jyoti", exist_ok=True)
+# print(os.listdir())
+# os.chdir(r"C:\Users\Maaz Khan\PYTHON_FULL_KRISH_NAIK\XGBoost")
+# print(os.getcwd())
+# os.mkdir("test")
+# os.rmdir("Maaz/Jyoti")
+# os.removedirs("Maaz/Jyoti")
+
+# os.rename("chap1.py", "chap1_renamed.py")
+# os.remove("test.txt")
+
+# info = os.stat("chap2.py")
+
+# print(info.st_size)  # File size in bytes
+# print(info.st_mtime)  # Lastest Modification Time
+# print(info.st_ctime)  # File creation time
+
+# print(os.path.exists("../example.db"))
