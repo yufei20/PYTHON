@@ -1,4 +1,16 @@
 ### ======================= Polymorphism ===================
+
+"""
+POLYMORPHISM: 
+it means method have same same but different logic inside, so each object behaves deifferently.
+
+can be implemented in these 5 ways, there are more ways but most commnly used concept
+1. method over riding
+2. method overloading
+3. operator overloading
+4. duck typing
+5. function overloading"""
+==================================
 """
 1. The word polymorphism means 'many forms'.
 2. In python, polymorphism allows us to use the same method name or interface for different objects, where each object can behave differently.
