@@ -253,70 +253,70 @@ account.__radd__(1000)
 
 # =================== __bool__() ========================
 
-# print(bool(10))
+print(bool(10))
 
-# print(bool(0))
+print(bool(0))
 
-# print(bool("Hello"))
+print(bool("Hello"))
 
-# print(bool(""))
-
-
-# class BankAccount:
-#     def __init__(self, balance):
-#         self.balance = balance
+print(bool(""))
 
 
-# account = BankAccount(0)
-# print(bool(account))
+class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
 
 
-# class BankAccount:
-#     def __init__(self, balance):
-#         self.balance = balance
-
-#     def __bool__(self):
-#         return self.balance <= 0
+account = BankAccount(0)
+print(bool(account))
 
 
-# account = BankAccount(100)
-# print(bool(account))
+class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
 
-# if account:
-#     print("Insufficient Balance")
-# else:
-#     print("Sufficient Balance")
+    def __bool__(self):
+        return self.balance <= 0
+
+
+account = BankAccount(100)
+print(bool(account))
+
+if account:
+    print("Insufficient Balance")
+else:
+    print("Sufficient Balance")
 
 
 # =========================== __contains__() ==============================
 
-# numbers = [10, 20, 40, 50]
+numbers = [10, 20, 40, 50]
 
-# print(10 in numbers)
-# print(20 in numbers)
-# print(30 in numbers)
-
-
-# class TransactionHistory:
-#     def __init__(self):
-#         self.transactions = []
-
-#     def add_transaction(self, transaction):
-#         self.transactions.append(transaction)
-
-#     def __contains__(self, amount):
-#         return amount in self.transactions
+print(10 in numbers)
+print(20 in numbers)
+print(30 in numbers)
 
 
-# history = TransactionHistory()
+class TransactionHistory:
+    def __init__(self):
+        self.transactions = []
 
-# history.add_transaction(500)
-# history.add_transaction(1000)
-# history.add_transaction(4000)
+    def add_transaction(self, transaction):
+        self.transactions.append(transaction)
 
-# print(500 in history)
-# print(4000 in history)
-# print(5000 in history)
+    def __contains__(self, amount):
+        return amount in self.transactions
+
+
+history = TransactionHistory()
+
+history.add_transaction(500)
+history.add_transaction(1000)
+history.add_transaction(4000)
+
+print(500 in history)
+print(4000 in history)
+print(5000 in history)
 
 
 # ========================= __getitem__() =============================
@@ -325,30 +325,30 @@ __getitem__() allows us to access elements of a custom object using square brack
 """
 
 
-# class TransactionHistory:
-#     def __init__(self):
-#         self.transactions = []
+class TransactionHistory:
+    def __init__(self):
+        self.transactions = []
 
-#     def add_transaction(self, transaction):
-#         self.transactions.append(transaction)
+    def add_transaction(self, transaction):
+        self.transactions.append(transaction)
 
-#     def __getitem__(self, index):
-#         if 0 <= index < len(self.transactions):
-#             return self.transactions[index]
-#         else:
-#             return "No transaction exists at this location."
+    def __getitem__(self, index):
+        if 0 <= index < len(self.transactions):
+            return self.transactions[index]
+        else:
+            return "No transaction exists at this location."
 
 
-# history = TransactionHistory()
+history = TransactionHistory()
 
-# history.add_transaction(500)
-# history.add_transaction(1000)
-# history.add_transaction(4000)
+history.add_transaction(500)
+history.add_transaction(1000)
+history.add_transaction(4000)
 
-# print(history[0])
-# print(history[1])
-# print(history[2])
-# print(history[3])
+print(history[0])
+print(history[1])
+print(history[2])
+print(history[3])
 
 
 # ========================== __setitem__() =========================
@@ -357,39 +357,45 @@ __setitem__() allows us to modify elements of a custom object using square brack
 """
 
 
-# class TransactionHistory:
-#     def __init__(self):
-#         self.transactions = []
+class TransactionHistory:
+    def __init__(self):
+        self.transactions = []
 
-#     def add_transaction(self, transaction):
-#         self.transactions.append(transaction)
+    def add_transaction(self, transaction):
+        self.transactions.append(transaction)
 
-#     def __getitem__(self, index):
-#         if 0 <= index < len(self.transactions):
-#             return self.transactions[index]
-#         else:
-#             return "No transaction exists at this location."
+    def __getitem__(self, index):
+        if 0 <= index < len(self.transactions):
+            return self.transactions[index]
+        else:
+            return "No transaction exists at this location."
 
-#     def __setitem__(self, index, value):
-#         if 0 <= index < len(self.transactions):
-#             self.transactions[index] = value
-#             return "Value set successfully"
-#         else:
-#             return "Nothing exists at the given index.Skipping..."
+    def __setitem__(self, index, value):
+        if 0 <= index < len(self.transactions):
+            self.transactions[index] = value
+            return "Value set successfully"
+        else:
+            return "Nothing exists at the given index.Skipping..."
 
 
-# history = TransactionHistory()
+history = TransactionHistory()
 
-# history.add_transaction(500)
-# history.add_transaction(1000)
-# history.add_transaction(4000)
+history.add_transaction(500)
+history.add_transaction(1000)
+history.add_transaction(4000)
 
-# print(history[0])
-# print(history[1])
-# print(history[2])
-# print(history[3])
+print(history[0])
+print(history[1])
+print(history[2])
+print(history[3])
 
-# history[2] = 2000
+history[2] = 2000
+
+print(history[0])
+print(history[1])
+print(history[2])
+print(history[3])
+
 
 # print(history[0])
 # print(history[1])
